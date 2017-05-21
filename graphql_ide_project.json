@@ -1,0 +1,105 @@
+{
+    "app": {
+        "version": "1.0"
+    },
+    "dataStore": {
+        "projectsById": {
+            "bfe6ee2e-e5b7-40b0-be7c-336c216ce459": {
+                "id": "bfe6ee2e-e5b7-40b0-be7c-336c216ce459",
+                "title": "Meetup Dresden",
+                "description": "",
+                "activeEnvironmentId": "fe84ba76-4dc0-43d3-a5bb-bf8a8179348e",
+                "environmentIds": [
+                    "fe84ba76-4dc0-43d3-a5bb-bf8a8179348e"
+                ],
+                "collectionQueryIds": [
+                    "43585fae-577b-4e74-9c5e-b3a52e09bfa8",
+                    "9958cf19-faa4-43d5-9967-23f88ccd446f",
+                    "3e61b57b-1bce-4d49-a060-8273726782a3",
+                    "d075af6d-19cb-4226-98d2-47b1203dc040",
+                    "595f283d-d02b-47e7-8de1-6132303b5a05"
+                ],
+                "headers": {}
+            }
+        },
+        "projects": [
+            "bfe6ee2e-e5b7-40b0-be7c-336c216ce459"
+        ],
+        "environmentsById": {
+            "fe84ba76-4dc0-43d3-a5bb-bf8a8179348e": {
+                "id": "fe84ba76-4dc0-43d3-a5bb-bf8a8179348e",
+                "title": "Default",
+                "url": "http://localhost:3000/graphql",
+                "queryMethod": "POST",
+                "variables": {}
+            }
+        },
+        "environments": [
+            "fe84ba76-4dc0-43d3-a5bb-bf8a8179348e"
+        ],
+        "queriesById": {
+            "43585fae-577b-4e74-9c5e-b3a52e09bfa8": {
+                "operationType": "query",
+                "headers": {},
+                "query": "query GetPosts {\n  posts {\n    id,\n  \ttitle,\n    author {\n      name\n      posts {\n        title\n        author {\n          name\n        }\n      }\n    }\n  }\n}",
+                "updatedAt": "2017-05-17T12:43:27.597Z",
+                "operationName": "GetPosts",
+                "variables": null,
+                "type": "COLLECTION",
+                "id": "43585fae-577b-4e74-9c5e-b3a52e09bfa8",
+                "createdAt": "2017-05-17T12:43:27.597Z"
+            },
+            "9958cf19-faa4-43d5-9967-23f88ccd446f": {
+                "operationType": "mutation",
+                "headers": {},
+                "query": "mutation AddAuthor($name: String!){\n  addAuthor(name: $name){\n    id, name\n  }\n}",
+                "updatedAt": "2017-05-17T12:49:23.720Z",
+                "operationName": "AddAuthor",
+                "variables": "{\n  \"name\": \"Paul\"\n}",
+                "type": "COLLECTION",
+                "id": "9958cf19-faa4-43d5-9967-23f88ccd446f",
+                "createdAt": "2017-05-17T12:49:23.720Z"
+            },
+            "3e61b57b-1bce-4d49-a060-8273726782a3": {
+                "operationType": "query",
+                "headers": {},
+                "query": "query GetAuthorAndPosts($id: ID!){\n  author(id: $id) {\n\t\tid\n    name\n    posts {\n      id\n      title\n      votes\n    }\n  }\n}",
+                "updatedAt": "2017-05-17T13:32:07.745Z",
+                "operationName": "GetAuthorAndPosts",
+                "variables": "{\n  \"id\": \"591c4b4686cc31024a73cb34\"\n}",
+                "type": "COLLECTION",
+                "id": "3e61b57b-1bce-4d49-a060-8273726782a3",
+                "createdAt": "2017-05-17T13:32:07.745Z"
+            },
+            "d075af6d-19cb-4226-98d2-47b1203dc040": {
+                "operationType": "mutation",
+                "headers": {},
+                "query": "mutation AddAuthor($name: String!){\n  addAuthor(name: $name){\n    id, name\n  }\n}",
+                "updatedAt": "2017-05-17T13:32:08.465Z",
+                "operationName": "AddAuthor",
+                "variables": "{\n  \"name\": \"Paul\"\n}",
+                "type": "COLLECTION",
+                "id": "d075af6d-19cb-4226-98d2-47b1203dc040",
+                "createdAt": "2017-05-17T13:32:08.465Z"
+            },
+            "595f283d-d02b-47e7-8de1-6132303b5a05": {
+                "operationType": "mutation",
+                "headers": {},
+                "query": "mutation WritePost($title: String!, $authorId: ID!){\n  writePost(title: $title, authorId: $authorId) {\n    id, title, votes, \n    author{\n      id\n      name\n    }\n  }\n}",
+                "updatedAt": "2017-05-17T13:32:09.499Z",
+                "operationName": "WritePost",
+                "variables": "{\n  \"title\": \"My first Post\",\n  \"authorId\": \"591ddda1750bad0d1e452b70\"\n}",
+                "type": "COLLECTION",
+                "id": "595f283d-d02b-47e7-8de1-6132303b5a05",
+                "createdAt": "2017-05-17T13:32:09.499Z"
+            }
+        },
+        "queries": [
+            "43585fae-577b-4e74-9c5e-b3a52e09bfa8",
+            "9958cf19-faa4-43d5-9967-23f88ccd446f",
+            "3e61b57b-1bce-4d49-a060-8273726782a3",
+            "d075af6d-19cb-4226-98d2-47b1203dc040",
+            "595f283d-d02b-47e7-8de1-6132303b5a05"
+        ]
+    }
+}
