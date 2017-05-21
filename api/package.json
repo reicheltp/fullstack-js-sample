@@ -1,0 +1,19 @@
+{
+  "name": "api",
+  "version": "1.0.0",
+  "main": "index.js",
+  "license": "MIT",
+  "scripts": {
+    "start": "nodemon -w . --exec micro"
+  },
+  "dependencies": {
+    "graphql": "^0.9.6",
+    "graphql-server-micro": "^0.7.2",
+    "graphql-tools": "^0.11.0",
+    "lodash": "^4.17.4",
+    "micro": "^7.3.3",
+    "micro-cors": "^0.0.4",
+    "mongoose": "^4.9.9",
+    "nodemon": "^1.11.0"
+  }
+}
